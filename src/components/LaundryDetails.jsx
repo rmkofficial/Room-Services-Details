@@ -8,7 +8,7 @@ export default function LaundryDetails() {
 
   useEffect(() => {
     axios
-    .get("../../public/data/data.json")
+      .get("../../data/data.json")
       .then((response) => {
         setRows(response.data);
       })
