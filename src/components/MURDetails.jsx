@@ -8,7 +8,7 @@ export default function MURDetails() {
 
   useEffect(() => {
     axios
-      .get("../../data/data.json")
+    .get("../../public/data/murData.json")
       .then((response) => {
         setRows(response.data);
       })
@@ -16,7 +16,7 @@ export default function MURDetails() {
   }, []);
 
   return (
-    <div style={{ height: 500, width: "100%" }}>
+    <div style={{ height: 600, width: "100%" }}>
       <DataGrid
         rows={rows}
         columns={columns()}

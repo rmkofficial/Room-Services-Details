@@ -24,11 +24,20 @@ const renderStatusButton = (params) => {
   );
 };
 
+const renderCellWithColor = (params) => (
+  <span style={{ color: "#49796B" }}>{params.value}</span>
+);
+
+const renderDurationCell = (params) => {
+  const { row } = params;
+  const color = row.status === "Delay" ? "#C20B01" : "#49796B";
+  return <span style={{ color }}>{params.value}</span>;
+};
+
 const columns = () => [
   {
     field: "date",
     headerName: "Date",
-    editable: true,
     flex: 1,
     renderHeader: (params) => (
       <span style={{ color: "white" }}>{params.colDef.headerName}</span>
@@ -37,7 +46,6 @@ const columns = () => [
   {
     field: "status",
     headerName: "Status",
-    editable: true,
     flex: 1,
     renderHeader: (params) => (
       <span style={{ color: "white" }}>{params.colDef.headerName}</span>
@@ -47,43 +55,42 @@ const columns = () => [
   {
     field: "requestTime",
     headerName: "Request Time",
-    editable: true,
     flex: 1,
     renderHeader: (params) => (
       <span style={{ color: "white" }}>{params.colDef.headerName}</span>
     ),
+    renderCell: renderCellWithColor,
   },
   {
     field: "operationStart",
     headerName: "Operation Start",
-    editable: true,
     flex: 1,
     renderHeader: (params) => (
       <span style={{ color: "white" }}>{params.colDef.headerName}</span>
     ),
+    renderCell: renderCellWithColor,
   },
   {
     field: "operationEnd",
     headerName: "Operation End",
-    editable: true,
     flex: 1,
     renderHeader: (params) => (
       <span style={{ color: "white" }}>{params.colDef.headerName}</span>
     ),
+    renderCell: renderCellWithColor,
   },
   {
     field: "duration",
     headerName: "Duration",
-    editable: true,
     flex: 1,
     renderHeader: (params) => (
       <span style={{ color: "white" }}>{params.colDef.headerName}</span>
     ),
+    renderCell: renderDurationCell,
   },
   {
     field: "employee",
     headerName: "Employee",
-    editable: true,
     flex: 1,
     renderHeader: (params) => (
       <span style={{ color: "white" }}>{params.colDef.headerName}</span>
