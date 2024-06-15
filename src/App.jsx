@@ -8,7 +8,7 @@ export default function App() {
   const [view, setView] = useState("mur");
 
   const getButtonStyle = (buttonType) => ({
-    backgroundColor: view === buttonType ? "green" : "blue",
+    backgroundColor: view === buttonType ? "#49796B" : "#A8C5DA",
     color: "white",
     marginRight: "10px",
   });
