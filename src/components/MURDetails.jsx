@@ -41,6 +41,15 @@ export default function MURDetails() {
           "& .MuiTablePagination-root": {
             color: "white",
           },
+          "& .MuiDataGrid-iconButtonContainer": {
+            color: "white",
+          },
+          "& .MuiDataGrid-menuIconButton": {
+            color: "white",
+          },
+          "& .MuiDataGrid-sortIcon": {
+            color: "white", 
+          },
         }}
       />
     </div>
