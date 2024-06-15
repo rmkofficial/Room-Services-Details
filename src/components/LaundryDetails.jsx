@@ -33,26 +33,26 @@ export default function LaundryDetails() {
         disableSelectionOnClick
         sx={{
           "& .MuiDataGrid-columnHeader": {
-            backgroundColor: "rgba(71,70,71,255)",
+            backgroundColor: "",
           },
           "& .MuiDataGrid-columnHeaderTitle": {
-            color: "white",
+            color: "black",
           },
           "& .MuiDataGrid-cell": {
-            color: "white",
-            backgroundColor: "rgba(71,70,71,255)",
+            color: "black",
+            backgroundColor: "",
           },
           "& .MuiTablePagination-root": {
-            color: "white",
+            color: "black",
           },
           "& .MuiDataGrid-iconButtonContainer": {
-            color: "white",
+            color: "black",
           },
           "& .MuiDataGrid-menuIconButton": {
-            color: "white",
+            color: "black",
           },
           "& .MuiDataGrid-sortIcon": {
-            color: "white",
+            color: "black",
           },
         }}
       />

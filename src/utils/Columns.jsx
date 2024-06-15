@@ -20,7 +20,7 @@ const renderStatusButton = (params) => {
   }
 
   return (
-    <Button style={{ backgroundColor: color, color: "white" }}>{value}</Button>
+    <Button style={{ backgroundColor: color, color: "black" }}>{value}</Button>
   );
 };
 
@@ -40,7 +40,7 @@ const columns = () => [
     headerName: "Date",
     flex: 1,
     renderHeader: (params) => (
-      <span style={{ color: "white" }}>{params.colDef.headerName}</span>
+      <span style={{ color: "black" }}>{params.colDef.headerName}</span>
     ),
   },
   {
@@ -48,7 +48,7 @@ const columns = () => [
     headerName: "Status",
     flex: 1,
     renderHeader: (params) => (
-      <span style={{ color: "white" }}>{params.colDef.headerName}</span>
+      <span style={{ color: "black" }}>{params.colDef.headerName}</span>
     ),
     renderCell: renderStatusButton,
   },
@@ -57,7 +57,7 @@ const columns = () => [
     headerName: "Request Time",
     flex: 1,
     renderHeader: (params) => (
-      <span style={{ color: "white" }}>{params.colDef.headerName}</span>
+      <span style={{ color: "black" }}>{params.colDef.headerName}</span>
     ),
     renderCell: renderCellWithColor,
   },
@@ -66,7 +66,7 @@ const columns = () => [
     headerName: "Operation Start",
     flex: 1,
     renderHeader: (params) => (
-      <span style={{ color: "white" }}>{params.colDef.headerName}</span>
+      <span style={{ color: "black" }}>{params.colDef.headerName}</span>
     ),
     renderCell: renderCellWithColor,
   },
@@ -75,7 +75,7 @@ const columns = () => [
     headerName: "Operation End",
     flex: 1,
     renderHeader: (params) => (
-      <span style={{ color: "white" }}>{params.colDef.headerName}</span>
+      <span style={{ color: "black" }}>{params.colDef.headerName}</span>
     ),
     renderCell: renderCellWithColor,
   },
@@ -84,7 +84,7 @@ const columns = () => [
     headerName: "Duration",
     flex: 1,
     renderHeader: (params) => (
-      <span style={{ color: "white" }}>{params.colDef.headerName}</span>
+      <span style={{ color: "black" }}>{params.colDef.headerName}</span>
     ),
     renderCell: renderDurationCell,
   },
@@ -93,7 +93,7 @@ const columns = () => [
     headerName: "Employee",
     flex: 1,
     renderHeader: (params) => (
-      <span style={{ color: "white" }}>{params.colDef.headerName}</span>
+      <span style={{ color: "black" }}>{params.colDef.headerName}</span>
     ),
   },
 ];

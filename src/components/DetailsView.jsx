@@ -48,8 +48,8 @@ export default function DetailsView() {
           style={{
             height: 600,
             width: "100%",
-            background: "rgba(71,70,71,255)",
-            border: "5px solid rgba(71,70,71,255)",
+            background: "",
+            border: "2px solid gray",
             borderRadius: "10px",
           }}
         >
