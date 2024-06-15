@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "date": "2024-08-22",
+    "status": "Delay",
+    "requestTime": "08:10",
+    "operationStart": "08:12",
+    "operationEnd": "10:26",
+    "duration": "2h 14m",
+    "employee": "Ufuk Gürbüzdal"
+  },
+  {
+    "id": 2,
+    "date": "2024-08-21",
+    "status": "Cleaning",
+    "requestTime": "08:10",
+    "operationStart": "08:12",
+    "operationEnd": "08:24",
+    "duration": "12m",
+    "employee": "Ufuk Gürbüzdal"
+  },
+  {
+    "id": 3,
+    "date": "2024-08-20",
+    "status": "Cleaned",
+    "requestTime": "08:10",
+    "operationStart": "08:12",
+    "operationEnd": "08:24",
+    "duration": "12m",
+    "employee": "Ufuk Gürbüzdal"
+  },
+  {
+    "id": 4,
+    "date": "2024-08-19",
+    "status": "Cleaned",
+    "requestTime": "08:10",
+    "operationStart": "08:12",
+    "operationEnd": "08:24",
+    "duration": "12m",
+    "employee": "Ufuk Gürbüzdal"
+  },
+  {
+    "id": 5,
+    "date": "2024-08-18",
+    "status": "n/a",
+    "requestTime": "n/a",
+    "operationStart": "n/a",
+    "operationEnd": "n/a",
+    "duration": "n/a",
+    "employee": "n/a"
+  },
+  {
+    "id": 6,
+    "date": "2024-08-17",
+    "status": "n/a",
+    "requestTime": "n/a",
+    "operationStart": "n/a",
+    "operationEnd": "n/a",
+    "duration": "n/a",
+    "employee": "n/a"
+  }
+]

@@ -1,19 +1,19 @@
+import { useState, useEffect } from "react";
 import { DataGrid } from "@mui/x-data-grid";
+import axios from "axios";
 import columns from "./utils/Columns";
 
 export default function App() {
-  const rows = [
-    {
-      id: 1,
-      date: "2023-01-01",
-      status: "Active",
-      requestTime: "08:00",
-      operationStart: "08:30",
-      operationEnd: "09:00",
-      duration: "30 mins",
-      employee: "John Doe",
-    },
-  ];
+  const [rows, setRows] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("/data/data.json")
+      .then((response) => {
+        setRows(response.data);
+      })
+      .catch((error) => console.error("Fetching data failed:", error));
+  }, []);
 
   return (
     <div style={{ height: 400, width: "100%" }}>
@@ -26,7 +26,6 @@ export default function App() {
           },
         }}
         pageSizeOptions={[5, 10]}
-        checkboxSelection
         disableSelectionOnClick
       />
     </div>

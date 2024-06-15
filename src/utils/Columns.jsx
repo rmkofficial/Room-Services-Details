@@ -14,34 +14,34 @@ const renderStatusCell = (params) => {
 };
 
 const columns = () => [
-  { field: "date", headerName: "Date", width: 120, editable: true },
+  { field: "date", headerName: "Date", editable: true, flex: 1 },
   {
     field: "status",
     headerName: "Status",
-    width: 120,
     editable: true,
     renderCell: renderStatusCell,
+    flex: 1,
   },
   {
     field: "requestTime",
     headerName: "Request Time",
-    width: 150,
     editable: true,
+    flex: 1,
   },
   {
     field: "operationStart",
     headerName: "Operation Start",
-    width: 150,
     editable: true,
+    flex: 1,
   },
   {
     field: "operationEnd",
     headerName: "Operation End",
-    width: 150,
     editable: true,
+    flex: 1,
   },
-  { field: "duration", headerName: "Duration", width: 100, editable: true },
-  { field: "employee", headerName: "Employee", width: 130, editable: true },
+  { field: "duration", headerName: "Duration", editable: true, flex: 1 },
+  { field: "employee", headerName: "Employee", editable: true, flex: 1 },
 ];
 
 export default columns;
