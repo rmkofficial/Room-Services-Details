@@ -1,16 +1,20 @@
 import { useState, useEffect } from "react";
 import { DataGrid } from "@mui/x-data-grid";
-import axios from "axios";
 import columns from "../utils/Columns";
 
 export default function MURDetails() {
   const [rows, setRows] = useState([]);
 
   useEffect(() => {
-    axios
-    .get("../../public/data/murData.json")
+    fetch("../../data/murData.json")
       .then((response) => {
-        setRows(response.data);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setRows(data);
       })
       .catch((error) => console.error("Fetching data failed:", error));
   }, []);
@@ -48,7 +52,7 @@ export default function MURDetails() {
             color: "white",
           },
           "& .MuiDataGrid-sortIcon": {
-            color: "white", 
+            color: "white",
           },
         }}
       />

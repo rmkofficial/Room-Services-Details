@@ -1,16 +1,20 @@
 import { useState, useEffect } from "react";
 import { DataGrid } from "@mui/x-data-grid";
-import axios from "axios";
 import columns from "../utils/Columns";
 
 export default function LaundryDetails() {
   const [rows, setRows] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("../../public/data/laundryData.json")
+    fetch("../../data/laundryData.json")
       .then((response) => {
-        setRows(response.data);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setRows(data);
       })
       .catch((error) => console.error("Fetching data failed:", error));
   }, []);
