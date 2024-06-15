@@ -82,21 +82,21 @@
   {
     "id": 9,
     "date": "2024-05-29",
-    "status": "Active",
-    "requestTime": "16:45",
+    "status": "n/a",
+    "requestTime": "",
     "operationStart": "",
     "operationEnd": "",
-    "duration": "2h 45m",
-    "employee": "Murat Aksoy"
+    "duration": "",
+    "employee": ""
   },
   {
     "id": 10,
     "date": "2024-05-30",
-    "status": "Delay",
-    "requestTime": "17:30",
+    "status": "n/a",
+    "requestTime": "",
     "operationStart": "",
     "operationEnd": "",
-    "duration": "1h 20m",
-    "employee": "Ebru Aydın"
+    "duration": "",
+    "employee": ""
   }
 ]
