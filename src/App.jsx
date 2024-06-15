@@ -1,33 +1,35 @@
-import { useState, useEffect } from "react";
-import { DataGrid } from "@mui/x-data-grid";
-import axios from "axios";
-import columns from "./utils/Columns";
+import { useState } from "react";
+import MURDetails from "./components/MURDetails";
+import LaundryDetails from "./components/LaundryDetails";
+import Button from "@mui/material/Button";
 
 export default function App() {
-  const [rows, setRows] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("/data/data.json")
-      .then((response) => {
-        setRows(response.data);
-      })
-      .catch((error) => console.error("Fetching data failed:", error));
-  }, []);
+  const [view, setView] = useState("none");
 
   return (
-    <div style={{ height: 400, width: "100%" }}>
-      <DataGrid
-        rows={rows}
-        columns={columns()}
-        initialState={{
-          pagination: {
-            paginationModel: { page: 0, pageSize: 5 },
-          },
-        }}
-        pageSizeOptions={[5, 10]}
-        disableSelectionOnClick
-      />
+    <div>
+      <div
+        style={{ display: "flex", justifyContent: "center", margin: "20px" }}
+      >
+        <Button
+          variant="contained"
+          color="primary"
+          style={{ marginRight: "10px" }}
+          onClick={() => setView("mur")}
+        >
+          MUR Details
+        </Button>
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={() => setView("laundry")}
+        >
+          Laundry Details
+        </Button>
+      </div>
+
+      {view === "mur" && <MURDetails />}
+      {view === "laundry" && <LaundryDetails />}
     </div>
   );
 }

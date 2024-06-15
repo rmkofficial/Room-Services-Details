@@ -1,27 +1,27 @@
 [
   {
     "id": 1,
-    "date": "2024-08-22",
+    "date": "Today",
     "status": "Delay",
     "requestTime": "08:10",
-    "operationStart": "08:12",
-    "operationEnd": "10:26",
+    "operationStart": "",
+    "operationEnd": "",
     "duration": "2h 14m",
     "employee": "Ufuk Gürbüzdal"
   },
   {
     "id": 2,
-    "date": "2024-08-21",
+    "date": "2024-05-21",
     "status": "Cleaning",
     "requestTime": "08:10",
     "operationStart": "08:12",
-    "operationEnd": "08:24",
-    "duration": "12m",
+    "operationEnd": "",
+    "duration": "",
     "employee": "Ufuk Gürbüzdal"
   },
   {
     "id": 3,
-    "date": "2024-08-20",
+    "date": "2024-05-20",
     "status": "Cleaned",
     "requestTime": "08:10",
     "operationStart": "08:12",
@@ -31,7 +31,7 @@
   },
   {
     "id": 4,
-    "date": "2024-08-19",
+    "date": "2024-05-19",
     "status": "Cleaned",
     "requestTime": "08:10",
     "operationStart": "08:12",
@@ -41,7 +41,7 @@
   },
   {
     "id": 5,
-    "date": "2024-08-18",
+    "date": "2024-05-18",
     "status": "n/a",
     "requestTime": "n/a",
     "operationStart": "n/a",
@@ -51,12 +51,22 @@
   },
   {
     "id": 6,
-    "date": "2024-08-17",
+    "date": "2024-05-17",
     "status": "n/a",
     "requestTime": "n/a",
     "operationStart": "n/a",
     "operationEnd": "n/a",
     "duration": "n/a",
     "employee": "n/a"
+  },
+  {
+    "id": 7,
+    "date": "Today",
+    "status": "Active",
+    "requestTime": "08:10",
+    "operationStart": "",
+    "operationEnd": "",
+    "duration": "",
+    "employee": ""
   }
 ]
