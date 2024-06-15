@@ -1,47 +1,57 @@
-const renderStatusCell = (params) => {
-  let color;
-  switch (params.value) {
-    case "Active":
-      color = "green";
-      break;
-    case "Inactive":
-      color = "red";
-      break;
-    default:
-      color = "black";
-  }
-  return <div style={{ color }}>{params.value}</div>;
-};
+const renderHeader = (headerName) => (
+  <span style={{ color: "white" }}>{headerName}</span>
+);
 
 const columns = () => [
-  { field: "date", headerName: "Date", editable: true, flex: 1 },
+  {
+    field: "date",
+    headerName: "Date",
+    editable: true,
+    flex: 1,
+    renderHeader: (params) => renderHeader(params.colDef.headerName),
+  },
   {
     field: "status",
     headerName: "Status",
     editable: true,
-    renderCell: renderStatusCell,
     flex: 1,
+    renderHeader: (params) => renderHeader(params.colDef.headerName),
   },
   {
     field: "requestTime",
     headerName: "Request Time",
     editable: true,
     flex: 1,
+    renderHeader: (params) => renderHeader(params.colDef.headerName),
   },
   {
     field: "operationStart",
     headerName: "Operation Start",
     editable: true,
     flex: 1,
+    renderHeader: (params) => renderHeader(params.colDef.headerName),
   },
   {
     field: "operationEnd",
     headerName: "Operation End",
     editable: true,
     flex: 1,
+    renderHeader: (params) => renderHeader(params.colDef.headerName),
   },
-  { field: "duration", headerName: "Duration", editable: true, flex: 1 },
-  { field: "employee", headerName: "Employee", editable: true, flex: 1 },
+  {
+    field: "duration",
+    headerName: "Duration",
+    editable: true,
+    flex: 1,
+    renderHeader: (params) => renderHeader(params.colDef.headerName),
+  },
+  {
+    field: "employee",
+    headerName: "Employee",
+    editable: true,
+    flex: 1,
+    renderHeader: (params) => renderHeader(params.colDef.headerName),
+  },
 ];
 
 export default columns;

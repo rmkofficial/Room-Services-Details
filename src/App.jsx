@@ -38,8 +38,21 @@ export default function App() {
         </Button>
       </div>
 
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <div style={{ height: 500, width: "100%" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <div
+          style={{
+            height: 500,
+            width: "100%",
+            background: "rgba(71,70,71,255)",
+            border: "5px solid rgba(71,70,71,255)",
+            borderRadius: "10px",
+          }}
+        >
           {view === "mur" && <MURDetails />}
           {view === "laundry" && <LaundryDetails />}
         </div>

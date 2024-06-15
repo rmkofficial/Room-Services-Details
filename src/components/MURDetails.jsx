@@ -16,7 +16,7 @@ export default function MURDetails() {
   }, []);
 
   return (
-    <div style={{ height: 500, width: "100%", }}>
+    <div style={{ height: 500, width: "100%" }}>
       <DataGrid
         rows={rows}
         columns={columns()}
@@ -27,6 +27,21 @@ export default function MURDetails() {
         }}
         pageSizeOptions={[5, 10, 20]}
         disableSelectionOnClick
+        sx={{
+          "& .MuiDataGrid-columnHeader": {
+            backgroundColor: "rgba(71,70,71,255)",
+          },
+          "& .MuiDataGrid-columnHeaderTitle": {
+            color: "white",
+          },
+          "& .MuiDataGrid-cell": {
+            color: "white",
+            backgroundColor: "rgba(71,70,71,255)",
+          },
+          "& .MuiTablePagination-root": {
+            color: "white",
+          },
+        }}
       />
     </div>
   );
