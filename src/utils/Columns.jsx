@@ -1,26 +1,45 @@
 import { Button } from "@mui/material";
 
+const renderHeader = (headerName) => (
+  <span style={{ color: "black", fontWeight: "bold" }}>{headerName}</span>
+);
+
 const renderStatusButton = (params) => {
   const { value } = params;
-  let color = "";
+  let backgroundColor = "";
+  let textColor = "white";
+  let borderColor = "transparent";
 
   switch (value) {
     case "Active":
     case "Delay":
-      color = "#E72636";
+      backgroundColor = "#E72636";
       break;
     case "Cleaning":
-      color = "#A8C5DA";
+      backgroundColor = "#A8C5DA";
       break;
     case "Cleaned":
-      color = "#49796B";
+      backgroundColor = "#49796B";
+      break;
+    case "n/a":
+      textColor = "black";
+      borderColor = "black";
       break;
     default:
-      color = "default";
+      backgroundColor = "default";
+      textColor = "black";
   }
 
   return (
-    <Button style={{ backgroundColor: color, color: "white" }}>{value}</Button>
+    <Button
+      style={{
+        backgroundColor,
+        color: textColor,
+        border: `1px solid ${borderColor}`,
+      }}
+    >
+      {value}
+    </Button>
   );
 };
 
@@ -30,7 +49,7 @@ const renderCellWithColor = (params) => (
 
 const renderDurationCell = (params) => {
   const { row } = params;
-  const color = row.status === "Delay" ? "#C20B01" : "#49796B";
+  const color = row.status === "Delay" ? "#E72636" : "#49796B";
   return <span style={{ color }}>{params.value}</span>;
 };
 
@@ -39,62 +58,48 @@ const columns = () => [
     field: "date",
     headerName: "Date",
     flex: 1,
-    renderHeader: (params) => (
-      <span style={{ color: "black" }}>{params.colDef.headerName}</span>
-    ),
+    renderHeader: (params) => renderHeader(params.colDef.headerName),
   },
   {
     field: "status",
     headerName: "Status",
     flex: 1,
-    renderHeader: (params) => (
-      <span style={{ color: "black" }}>{params.colDef.headerName}</span>
-    ),
+    renderHeader: (params) => renderHeader(params.colDef.headerName),
     renderCell: renderStatusButton,
   },
   {
     field: "requestTime",
     headerName: "Request Time",
     flex: 1,
-    renderHeader: (params) => (
-      <span style={{ color: "black" }}>{params.colDef.headerName}</span>
-    ),
+    renderHeader: (params) => renderHeader(params.colDef.headerName),
     renderCell: renderCellWithColor,
   },
   {
     field: "operationStart",
     headerName: "Operation Start",
     flex: 1,
-    renderHeader: (params) => (
-      <span style={{ color: "black" }}>{params.colDef.headerName}</span>
-    ),
+    renderHeader: (params) => renderHeader(params.colDef.headerName),
     renderCell: renderCellWithColor,
   },
   {
     field: "operationEnd",
     headerName: "Operation End",
     flex: 1,
-    renderHeader: (params) => (
-      <span style={{ color: "black" }}>{params.colDef.headerName}</span>
-    ),
+    renderHeader: (params) => renderHeader(params.colDef.headerName),
     renderCell: renderCellWithColor,
   },
   {
     field: "duration",
     headerName: "Duration",
     flex: 1,
-    renderHeader: (params) => (
-      <span style={{ color: "black" }}>{params.colDef.headerName}</span>
-    ),
+    renderHeader: (params) => renderHeader(params.colDef.headerName),
     renderCell: renderDurationCell,
   },
   {
     field: "employee",
     headerName: "Employee",
     flex: 1,
-    renderHeader: (params) => (
-      <span style={{ color: "black" }}>{params.colDef.headerName}</span>
-    ),
+    renderHeader: (params) => renderHeader(params.colDef.headerName),
   },
 ];
 
