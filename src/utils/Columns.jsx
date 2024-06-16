@@ -20,7 +20,7 @@ const renderStatusButton = (params) => {
   }
 
   return (
-    <Button style={{ backgroundColor: color, color: "black" }}>{value}</Button>
+    <Button style={{ backgroundColor: color, color: "white" }}>{value}</Button>
   );
 };
 
